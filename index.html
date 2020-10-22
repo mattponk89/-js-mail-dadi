@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Esercizi Mail & Dadi</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<main>
+			<div class="box h-250p">
+				<input id="searchEmail" type="email" name="emailSearch" placeholder="Email da cercare">
+				<button id="btnSearchEmail" type="button" name="button">Cerca Email</button>
+				<div class="answer-email">
+					<h1 id="emailMessage"></h1>
+				</div>
+			</div>
+			<div class="box h-500p">
+				<div class="row">
+					<h1>Riuscirai a vincere contro il tavolo?</h1>
+					<button id="btnDice" type="button" name="button">Tira il dado!</button>
+				</div>
+
+				<div class="user-dice w-50 d-inblc">
+					<h3>Tuo dado:</h3>
+					<h2 id="userDice">?</h2>
+				</div>
+				<div class="pc-dice w-50 d-inblc">
+					<h3>Dado pc:</h3>
+					<h2 id="pcDice">?</h2>
+				</div>
+				<div class="scoreboard">
+					<h1 id="victoryMessage"></h2>
+					<div class="user-box d-inblc w-50">
+						<h3>Il tuo punteggio:</h3>
+						<h2 id="userScore">0</h2>
+					</div>
+					<div class="pc-box d-inblc w-50">
+						<h3>Il punteggio del pc:</h3>
+						<h2 id="pcScore">0</h2>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<script src="js/script.js" charset="utf-8"></script>
+	</body>
+</html>

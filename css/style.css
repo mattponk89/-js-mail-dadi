@@ -1,0 +1,39 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main{
+  text-align: center;
+}
+.box{
+  width: 60%;
+  padding: 30px;
+  background-color: grey;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.h-250p{
+  height: 250px;
+}
+.h-500p{
+  height: 500px;
+}
+.w-50{
+  width: 50%;
+}
+.d-inblc{
+  display: inline-block;
+}
+.user-dice{
+  border-bottom: 1px solid black;
+  margin-top: 30px
+}
+.scoreboard{
+  margin-top: 30px;
+}
+#emailMessage{
+  margin-top: 30px;
+}
