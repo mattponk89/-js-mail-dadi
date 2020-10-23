@@ -16,19 +16,14 @@ function() {
 
   searchEmail = searchEmailEl.value; // valorizzo il contenuto del input email in una variabile
 
+  emailMessageEl.innerHTML = 'Email non trovata!';
   for(var i=0; i< emailSaved.length; i++){ // ciclo per controllare tutto il mio array con le email dentro
 
-    var trovata = false; // ad inizio for valorizzo una variabile booleana come false per identificare che non ho trovato nessuna mail
 
     if (emailSaved[i] === searchEmail){ // controllo se email è uguale al input del utente
       emailMessageEl.innerHTML = 'Email Trovata!';
-      trovata = true; // cambio valore al mio controllo di ricerca
-      break; // Esco dal ciclo avendo trovato la mail.
     }
 
-  }
-  if (trovata == false) { // verifico se la mia ricerca di prima ha avuto un valore negarivo.
-    emailMessageEl.innerHTML = 'Email non trovata!';
   }
 }
 );
