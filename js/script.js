@@ -23,7 +23,7 @@ function() {
     if (emailSaved[i] === searchEmail){ // controllo se email è uguale al input del utente
       emailMessageEl.innerHTML = 'Email Trovata!';
       trovata = true; // cambio valore al mio controllo di ricerca
-      i = emailSaved.length; // valorizzo il mio indice uguale al length del array per farlo uscire dal ciclo
+      break; // Esco dal ciclo avendo trovato la mail.
     }
 
   }
@@ -50,20 +50,25 @@ var btnDiceEl = document.getElementById('btnDice');
 // al click del tasto facciamo partire il nostro codice di generazione dei dadi!
 btnDiceEl.addEventListener('click',
 function() {
+  //calcolo i dadi con random e li metto dentro due variabili
   var userDice = (Math.floor(Math.random() * 6) + 1);
   var pcDice = (Math.floor(Math.random() * 6) + 1);
+  // punto due variabili al DOM per visualizzare i dadi tirati
   userDiceEl.innerHTML = userDice;
   pcDiceEl.innerHTML = pcDice;
 
+  // verifico quale dado ha vinto
   if (userDice > pcDice){
     victoryMessageEl.innerHTML = 'Hai vinto! Sei stato fortunato.. riprovaci!';
-    userScore++;
+    userScore++; //aggiungo uno al punteggio del giocatore avendo vinto questo turno.
   } else if(userDice < pcDice){
     victoryMessageEl.innerHTML = 'Ha vinto il pc! Vincerà il pc sempre può riprovaci se vuoi perdere ancora!';
-    pcScore++;
+    pcScore++; // aggiungo uno al punteggio del pc avendo vinto questo turno
   } else {
     victoryMessageEl.innerHTML = 'Pareggio. Riprova!';
   }
+
+  // faccio visualizzare il risultato aggiornato degli score
   userScoreEl.innerHTML = userScore;
   pcScoreEl.innerHTML = pcScore;
 });
